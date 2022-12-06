@@ -7,6 +7,9 @@ https://doc.rust-lang.org/stable/rust-by-example
 
 https://rust-unofficial.github.io/patterns
 
+&nbsp;  
 ## Basics
 ***
+
+#### E
 
