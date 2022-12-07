@@ -16,12 +16,12 @@ LDFLAGS =
 RM = rm -rvf
 
 #Executable files retriving
-SRCS := $(wildcard *.crs)
+SRCS := $(wildcard *.rs)
 BINS := $(SRCS:%.rs=%)
 
 all: clean $(BINS)
 
-%: %.
+%: $(SRCS)
 	$(LD) $(LDFLAGS) $<
 
 
