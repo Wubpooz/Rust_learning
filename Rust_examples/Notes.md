@@ -1,5 +1,4 @@
-# Rust by Examples  
-***
+# Rust by Examples
 &nbsp;
 ## Basics
 ***
@@ -8,7 +7,7 @@
 // or /* */ for regular or ///, //! for documentation.
 
 &nbsp;
- #### Print : 
+#### Print : 
 ```format!``` : write to string.
 ```printl!/println!``` : same but print to console.  ```eprint!/eprintln!``` : same but to standard error.  
 
