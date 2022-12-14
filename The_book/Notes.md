@@ -45,6 +45,27 @@ match guess.cmp(&secret_number) {
 ## Common Concepts
 ***
 
-#### Variables and mutability
+#### Variables and Mutability
 
-`let`{:.language-rust}
+`let` is immutable (meaning that `let x= 5; x=6;` returns an error).
+
+mutable : `let mut`.
+
+constant : `const NAME: u32 = 3.14;`
+
+shadowing : declaring a new variable with the same name as the previous one.
+```rust
+let x = 5;
+
+let x = x + 1;  //x = 6
+
+{
+    let x = x * 2; // x =  12 inside this scope
+}
+// x = 6
+```
+Effectivly, it creates a new variable each time (that may be local and therefore overwrites the global one ONLY INSIDE its scope ; it can also have a different type).
+
+&nbsp;
+#### Data Types
+https://doc.rust-lang.org/book/ch03-02-data-types.html
