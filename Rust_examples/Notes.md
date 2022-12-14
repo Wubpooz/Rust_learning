@@ -1,13 +1,5 @@
-## Ressources
+# Rust by Examples  
 ***
-
-https://doc.rust-lang.org/book/
-https://github.com/rust-lang/rustlings/
-https://doc.rust-lang.org/stable/rust-by-example
-
-https://rust-unofficial.github.io/patterns
-
-&nbsp;  
 &nbsp;
 ## Basics
 ***
@@ -47,3 +39,4 @@ The tradeoff is that it sacrifices elegance.
 
 ##### Display : 
 As said, `fmt::Display` need to be implemented for new types (and generic containers due to ambiguity of how to display for different elements).
+

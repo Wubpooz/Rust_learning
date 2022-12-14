@@ -1,5 +1,5 @@
 #Usages
-#make : compiles all .ml
+#make : compiles all .rs
 #make clean : remove ALL binaries and .pdb
 
 .PHONY : all clean
