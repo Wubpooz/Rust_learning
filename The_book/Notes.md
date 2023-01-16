@@ -84,6 +84,7 @@ Scalar types : represents a single value (int, float, bool, char).
 | 32-bit| `i32`|`u32`|
 |64-bit|`i64`|`u64`|
 |128-bit|`i128`|`u128`|
+|arch| `isize`|`usize`|
 Signed are stored using 2's complement (so from $- 2^{n-1}$ to $2^{n-1}-1$).
 
 You can write decimal as `19_000` and byte (`u8`) as `b'A'`.
@@ -149,14 +150,46 @@ for each : `for el in a {}`.
 ## 4. Ownership
 ***
 
+
+#### Explanation
+
+__Memory__
+
 Stack is LIFO, used to store fixed,known -size data.  
 Heap is unorganized so pointer based (that can be in the heap).
 Stack is faster both in and out.  
 Functions called (with variables etc) are on the stack.  
 
 &nbsp;
-Ownership Rules :
+__Ownership Rules :__
 - each value has an owner.
 - one owner at a time.
 - when owner is out of scope, the value is dropped.
 
+Intro to String (to show ownership) :
+```rust
+let mut s = String::from("hello");
+s.push_str(", world");
+```
+
+&nbsp;
+Now that we have a mutable String, heap need to be allocated at runtime and free it after.
+`String::from` does the first part for us.
+
+__Rust free the memory (via `drop`) once the owner of the memory location goes out of scope.__
+
+&nbsp;
+When an int is copied, the value is copied ; but whith a String this is not the case, we copy a pointer (and len + capacity). So, in Rust, you CAN'T copy a String to a new variable and keep the first one (it might cause double free), the first is deleted. It's a `move`.
+To get a real copy, we can use something like `.clone()`.
+
+The same is applicable for a function, String will be moved and i32 copied. 
+HOWEVER, you can transfer back ownership via a return ! You can make it part of a tuple alongside the desired return values.
+
+
+&nbsp;
+#### References and Borrow-Checking
+
+Instead of moving ownership and having to return it we can just pass in a reference (pointer with valid value).
+```rust
+fn calc_len(s: &String) -> usize {s.len()}
+```
