@@ -1,6 +1,6 @@
 # The Book
 &nbsp;
-## Compiling
+## 1. Compiling
 ***
  - compiling : `rustc name.rs` then `./name`.
  -  cargo :
@@ -13,7 +13,7 @@ use rand::Rng; ``` in the .rs)
     - documentation : `cargo doc --open`
 
 &nbsp;
-## Basics (I/O, rand and match)
+## 2. Basics (I/O, rand and match)
 ***
 
 - read line :
@@ -42,7 +42,7 @@ match guess.cmp(&secret_number) {
 ```
 
 &nbsp;
-## Common Concepts
+## 3. Common Concepts
 ***
 
 #### Variables and Mutability
@@ -68,4 +68,95 @@ Effectivly, it creates a new variable each time (that may be local and therefore
 
 &nbsp;
 #### Data Types
-https://doc.rust-lang.org/book/ch03-02-data-types.html
+
+Type annotation : 
+```rust
+let i:u8 = 42;
+```
+
+Scalar types : represents a single value (int, float, bool, char).  
+
+• Integer : 
+| Length | Signed | Unsigned |
+|--------|--------|----------|
+| 8-bit | `i8`|`u8`|
+| 16-bit| `i16`|`u16`|
+| 32-bit| `i32`|`u32`|
+|64-bit|`i64`|`u64`|
+|128-bit|`i128`|`u128`|
+Signed are stored using 2's complement (so from $- 2^{n-1}$ to $2^{n-1}-1$).
+
+You can write decimal as `19_000` and byte (`u8`) as `b'A'`.
+
+
+• Float : 
+Either `f32`or `f64` (default is the second).
+
+• Char & Boolean : as in C.
+
+
+&nbsp;
+Compound types : group multiple values.
+
+• Tuple : 
+fixed length, multiple types
+```rust
+let tup: (i32,f64,u8) = (500, 6.4,1);
+let (x,y,z) = tup;
+```
+The second line is used to recover the components. Alternatively you can use `tup.i`, where `i` is the indice.
+
+The empty tuple `()` is the `unit` type, the empty one.
+
+&nbsp;
+• Array :
+fixed length, single type
+```rust
+let a : [i32;5] = [1,2,3,4,5];
+```
+The first parameter is the type, the second the length ( also use to initalize).
+Accessing is the usual `a[i]`.
+
+&nbsp; 
+#### Functions
+
+Delcaration :
+```rust
+fn fct_name(var:i32) -> i32 /*return type*/ { expr;}
+```
+
+
+Rust supports functionnal patterns such as : 
+```rust
+let x = {let y=3; y+1}   // x=4
+
+fn plus_one(x:i32) -> i32 {
+    x+1;
+}
+```
+It returns the last value in scope or the value in a `return`.
+
+&nbsp;
+#### Flow statements
+
+Flow statements don't require parenthesis.
+
+for each : `for el in a {}`.
+
+
+
+&nbsp;
+## 4. Ownership
+***
+
+Stack is LIFO, used to store fixed,known -size data.  
+Heap is unorganized so pointer based (that can be in the heap).
+Stack is faster both in and out.  
+Functions called (with variables etc) are on the stack.  
+
+&nbsp;
+Ownership Rules :
+- each value has an owner.
+- one owner at a time.
+- when owner is out of scope, the value is dropped.
+
