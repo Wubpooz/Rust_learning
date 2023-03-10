@@ -193,3 +193,6 @@ Instead of moving ownership and having to return it we can just pass in a refere
 ```rust
 fn calc_len(s: &String) -> usize {s.len()}
 ```
+
+Borrowing : creating a reference.
+You can't change the referenced object.
