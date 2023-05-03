@@ -6,6 +6,10 @@ https://github.com/rust-lang/rustlings/
 https://doc.rust-lang.org/stable/rust-by-example  
 
 https://rust-unofficial.github.io/patterns   
+https://github.com/rust-lang/rustlings  
+https://rustc-dev-guide.rust-lang.org  
+https://stevedonovan.github.io/rust-gentle-intro/
+Zero To Production In Rust
 
 
 &nbsp;
