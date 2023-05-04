@@ -9,7 +9,8 @@ https://rust-unofficial.github.io/patterns
 https://github.com/rust-lang/rustlings  
 https://rustc-dev-guide.rust-lang.org  
 https://stevedonovan.github.io/rust-gentle-intro/
-Zero To Production In Rust
+Zero To Production In Rust  
+https://gtk-rs.org/gtk4-rs/stable/latest/book/  
 
 
 &nbsp;
