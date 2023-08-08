@@ -5,6 +5,7 @@ https://doc.rust-lang.org/book/
 https://github.com/rust-lang/rustlings/   
 https://doc.rust-lang.org/stable/rust-by-example  
 
+https://youtu.be/ygL_xcavzQ4  
 https://rust-unofficial.github.io/patterns   
 https://github.com/rust-lang/rustlings  
 https://rustc-dev-guide.rust-lang.org  
