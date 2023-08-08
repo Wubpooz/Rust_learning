@@ -12,6 +12,7 @@ https://rustc-dev-guide.rust-lang.org
 https://stevedonovan.github.io/rust-gentle-intro/
 Zero To Production In Rust  
 https://gtk-rs.org/gtk4-rs/stable/latest/book/  
+https://youtu.be/CTTiaOo4cbY  
 
 
 &nbsp;
